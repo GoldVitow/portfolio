@@ -1,0 +1,265 @@
+/* General */
+
+* {
+   padding: 0;
+   margin: 0;
+}
+
+ul {
+   list-style: none;
+}
+
+body {
+   font-family: "Montserrat";
+   margin: 0;
+}
+
+a {
+   text-decoration: none;
+}
+
+
+
+/* Main */
+
+main {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 100px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+@media(max-width: 545px) {
+   main {
+      padding: 50px;
+   }
+}
+@media(max-width: 410px) {
+   main {
+      padding: 20px;
+   }
+}
+
+.about-me__container {
+   display: flex;
+   width: fit-content;
+   margin: 0 auto;
+   margin-top: 40px;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+@media(max-width: 470px) {
+   .about-me__container {
+      margin-top: 20px;
+   }
+}
+
+.about-me{
+   --hover: 0;
+}
+ 
+.about-me:hover {
+   --hover: 1;
+}
+
+
+
+
+/* about-me header */
+
+.about-me__header-container {
+   width: fit-content;
+}
+.about-me_header-container_one {
+   margin-bottom: 5px;
+}
+
+.about-me__header {
+   font-size: 36px;
+   font-family: monospace;
+   overflow: hidden;
+   border-right: .15em solid #4B70E2;
+   white-space: nowrap;
+   letter-spacing: .15em;
+}
+
+.about-me_header_one {
+   animation: 
+   typing 2s steps(30, end),
+   blink-caret .5s step-end infinite; 
+}
+@keyframes typing {
+  from { width: 0}
+  to { width: 100%}
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #4B70E2}
+}
+@media (max-width: 690px) {
+   .about-me_header_one {
+      font-size: 25px;
+   }
+}
+@media (max-width: 485px) {
+   .about-me_header_one {
+      font-size: 20px;
+   }
+}
+@media (max-width: 375px) {
+   .about-me_header_one {
+      font-size: 15px;
+   }
+}
+._stop-blink {
+   border: 0;
+}
+._stop-blink::after {
+   content: '';
+   border-right: .15em solid white;
+}
+
+
+.about-me_header_two {
+   animation:
+      vis 2.5s steps(1, end),
+      typing 2s steps(30, end) 2.5s,
+      blink-caret .5s step-end infinite;
+}
+@keyframes vis {
+   from {opacity: 0;}
+   to {opacity: 1;}
+}
+@media (max-width: 830px) {
+   .about-me_header_two {
+      font-size: 25px;
+   }
+}
+@media (max-width: 575px) {
+   .about-me_header_two {
+      font-size: 20px;
+   }
+}
+@media (max-width: 460px) {
+   .about-me_header_two {
+      font-size: 15px;
+   }
+}
+@media (max-width: 345px) {
+   .about-me_header_two {
+      font-size: 10px;
+   }
+}
+
+
+
+
+/* Figure */
+
+.about-me__figure-block {
+   width: 300px;
+   margin-right: 40px;
+
+   animation-duration: 1s;
+   animation-fill-mode: both;
+   animation-delay: 4.5s;
+   animation-name: fadeInLeft;
+}
+@-webkit-keyframes fadeInLeft {
+   from {
+      opacity: 0;
+      transform: translateX(-20%);
+   }
+
+   to {
+      opacity: 1;
+      transform: none;
+   }
+}
+@media(max-width: 767px) {
+   .about-me__figure-block {
+      margin-right: 0;
+   }
+   .about-me__container {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-items: center;
+   }
+}
+
+.about-me__figure {
+   height: 300px;
+   --bg: hsl(215 60% calc(90% - (var(--hover) * 10%)));
+   --accent: hsl(225 72% 59%);
+   transition: 0.2s;
+   background:
+     radial-gradient(circle at top left, var(--accent), transparent 75%),
+     var(--bg);
+   margin: 0;
+   position: relative;
+   overflow: hidden;
+   border-radius: 1.5rem;
+}
+ 
+.about-me__img {
+   position: absolute;
+   top: 15%;
+   width: 40%;
+   transform:
+     translateX(calc(var(--hover) * 5%))
+     scale(calc(1 + (var(--hover) * 0.3)));
+   transition: transform 0.2s;
+   width: 300px;
+}
+
+@media (max-width: 375px) {
+   .about-me__figure-block {
+      width: 250px;
+   }
+   .about-me__figure {
+      height: 250px;
+   }
+   .about-me__img {
+      left: -25px;
+   }
+}
+
+
+
+/* socials */
+
+.socials {
+   display: flex;
+   flex-direction: column;
+   font-size: 30px;
+   margin-top: 20px;
+
+   animation-duration: 1s;
+   animation-fill-mode: both;
+   animation-delay: 5s;
+   animation-name: fadeInRight;
+}
+ 
+@-webkit-keyframes fadeInRight{
+   from {
+      opacity: 0;
+      transform: translateX(20%);
+   }
+
+   to {
+      opacity: 1;
+      transform: none;
+   }
+}
+@media (max-width: 882px) {
+   .socials {
+      font-size: 20px;
+   }
+}
+
+.socials__link {
+   color: #4B70E2;
+}
+ 

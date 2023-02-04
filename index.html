@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+   <link rel="stylesheet" href="styles/style.css">
+   <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css">
+	<script src="libs/swiper/swiper-bundle.min.js" defer></script>
+
+   <!-- <link rel="stylesheet" href="libs/wow/animate.css">
+   <script src="libs/wow/wow.min.js" defer></script> -->
+
+	<link rel="stylesheet" href="styles/slider.css">
+	<script src="scripts/slider.js" defer></script>
+
+   <title>Maksim</title>
+</head>
+<body>
+   <main class="about-me"><a name="about-me"></a>
+      <div class="about-me__header-container about-me_header-container_one">
+         <h2 class="about-me__header about-me_header_one">Привет, я Нестеров Максим</h2>
+      </div>
+      <div class="about-me__header-container">
+         <h2 class="about-me__header about-me_header_two">Начинающий frontEnd-разработчик</h2>
+      </div>   
+      <div class="about-me__container">
+
+         <div class="about-me__figure-block">
+            <figure class="about-me__figure"><img class="about-me__img" src="images/me.png" alt=""></figure>
+         </div>
+
+         <div class="about-me__social-block socials">  
+            <div class="socials__social-block">
+               <span class="socials__social">telegram:</span>
+               <a href="https://t.me/GoldVitow" class="socials__link" target="_blank">@goldvitow</a>
+            </div>
+            <div class="socials__social-block">
+               <span class="socials__social">vk:</span>
+               <a href="https://vk.com/goldvitow" class="socials__link" target="_blank">@goldvitow</a>
+            </div>
+            <div class="socials__social-block">
+               <span class="socials__or">или</span>
+               <a href="#form" class="socials__link">заполните форму</a>
+            </div>
+         </div>
+      </div>
+   </main>
+
+
+   <section class="swiper slider">
+      <p class="slider__helper animate__fadeOutDown">Потяните картинку в сторону, чтобы прокрутить карусель, клик по картинке открывает соответсвующий сайт</p>
+		<div class="swiper-wrapper slider__wrapper">
+
+			<div class="swiper-slide slider__item">
+            <a href="https://vk.com/goldvitow" target="_blank">
+               <div class="slider__layer" data-swiper-parallax="35%" style="background-image: url(images/screen-1/layer-back.jpg);"></div>
+               <div class="slider__layer" data-swiper-parallax="25%" style="background-image: url(images/screen-1/layer-middle.png);"></div>
+               <div class="slider__layer" data-swiper-parallax="14%" style="background-image: url(images/screen-1/layer-front.png);"></div>
+            </a>
+			</div>
+
+			<div class="swiper-slide slider__item">
+            <a href="https://vk.com/goldvitow" target="_blank">
+               <div class="slider__layer" data-swiper-parallax="40%" style="background-image: url(images/screen-2/layer-back.jpg);"></div>
+               <div class="slider__layer" data-swiper-parallax="34%" style="background-image: url(images/screen-2/layer-gera.png);"></div>
+               <div class="slider__layer" data-swiper-parallax="30%" style="background-image: url(images/screen-2/layer-yen.png);"></div>
+               <div class="slider__layer" data-swiper-parallax="14%" style="background-image: url(images/screen-2/layer-front.png);"></div>
+            </a>
+			</div>
+
+			<div class="swiper-slide slider__item">
+            <a href="https://vk.com/goldvitow" target="_blank">
+               <div class="slider__layer" data-swiper-parallax="48%" style="background-image: url(images/screen-3/layer-back.jpg);"></div>
+               <div class="slider__layer" data-swiper-parallax="35%" style="background-image: url(images/screen-3/layer-middle.png);"></div>
+               <div class="slider__layer" data-swiper-parallax="29%" style="background-image: url(images/screen-3/layer-ciri.png);"></div>
+               <div class="slider__layer" data-swiper-parallax="16%" style="background-image: url(images/screen-3/layer-front.png);"></div>
+            </a>
+			</div>
+
+		</div>
+	</section>
+   <script src="scripts/script.js" defer></script>
+</body>
+</html>
